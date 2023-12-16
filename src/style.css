@@ -30,6 +30,15 @@ a:hover {
   color: rgb(78, 166, 248);
 }
 
+ul {
+  list-style: none;
+}
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-around;
+}
+
 .search-form-input {
   font-size: 16px;
   padding: 20px;
@@ -45,4 +54,5 @@ a:hover {
   border-radius: 6px;
   background-color: rgb(78, 166, 248);
   color: white;
+  margin-left: 5px;
 }
