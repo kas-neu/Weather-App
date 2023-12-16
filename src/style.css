@@ -5,8 +5,29 @@ body {
 .weather-app {
   background: white;
   max-width: 600px;
-  margin: 20px auto;
-  padding: 30px;
+  margin: 30px auto;
+  padding: 10px 30px 30px 30px;
   box-shadow: 0 30px 50px rgba(147, 147, 147, 0.092);
   border-radius: 10px;
+}
+header {
+  border-bottom: 1px solid rgba(224, 240, 255, 0.372);
+  padding: 30px 0;
+}
+
+.search-form-input {
+  font-size: 16px;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(224, 240, 255, 0.372);
+  width: 80%;
+}
+.search-form-button {
+  font-size: 16px;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(78, 166, 248);
+  color: white;
 }
