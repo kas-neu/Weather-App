@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(224, 240, 255);
+  font-family: "Oswald", sans-serif;
+}
+.weather-app {
+  background: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 0 30px 50px rgba(147, 147, 147, 0.092);
+  border-radius: 10px;
+}

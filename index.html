@@ -3,21 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
   </head>
   <body>
-    <h1>Welcoem to weather app</h1>
-    <footer>
-      This site was coded by
-      <a href="https://github.com/kas-neu" target="_blank">Kasia Neugebauer</a>,
-      is on
-      <a href="https://github.com/kas-neu/Weather-App" target="_blank"
-        >Github</a
-      >
-      and hosted on
-      <a href="https://weather-app-by-kas.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="search" />
+        </form>
+      </header>
+      <main>
+        <h1>London</h1>
+        <p>monday 13th 13:14</p>
+        <div>☀️</div>
+        18
+        <p>
+          clear sky <br />
+          humidity <br />
+          wind
+        </p>
+      </main>
+      <section>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+      </section>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/kas-neu" target="_blank">Kasia Neugebauer</a
+        >, is open-sourced on
+        <a href="https://github.com/kas-neu/Weather-App" target="_blank"
+          >Github</a
+        >
+        and hosted on
+        <a href="https://weather-app-by-kas.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
+    </div>
   </body>
 </html>
