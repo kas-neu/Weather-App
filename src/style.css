@@ -20,7 +20,7 @@ footer {
   text-align: center;
   color: rgb(58, 58, 58);
   font-weight: 200;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
 }
 a {
@@ -33,10 +33,65 @@ a:hover {
 ul {
   list-style: none;
 }
+ul li {
+  margin-bottom: 30px;
+}
+main {
+  padding: 30px 0;
+}
+section {
+  padding: 0 30px;
+  margin-right: 40px;
+}
+strong {
+  color: rgb(46, 83, 118);
+}
 
+.weather-app-city {
+  font-size: 58px;
+  line-height: 78px;
+  margin: 0;
+  letter-spacing: -2px;
+}
+.city-current-date {
+  color: rgba(39, 33, 66, 0.4);
+  margin: 0;
+}
+.today-tempereature-container {
+  display: flex;
+  margin-top: 20px;
+}
+.today-temperature-icon {
+  font-size: 38px;
+  margin-top: 15px;
+}
+.today-temperature-value {
+  font-size: 60px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.today-temperature-unit {
+  font-size: 28px;
+  margin-top: 10px;
+}
+.today-weather-description {
+  color: rgba(39, 33, 66, 0.4);
+}
+.forecast-following-days {
+  font-size: 24px;
+}
+.forecast-emoji {
+  font-size: 24px;
+}
+
+.forecast-info {
+  font-size: 14px;
+  color: rgba(39, 33, 66, 0.4);
+}
 .weather-app-data {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .search-form-input {
