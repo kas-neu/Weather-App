@@ -62,16 +62,16 @@ strong {
 .today-tempereature-container {
   display: flex;
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 5px;
 }
 .today-temperature-icon {
-  font-size: 38px;
-  margin-top: 15px;
+  height: 90px;
+  width: 90px;
+  margin-top: 5px;
 }
 .today-temperature-value {
   font-size: 60px;
   font-weight: 500;
-  margin-left: 10px;
 }
 
 .today-temperature-unit {
