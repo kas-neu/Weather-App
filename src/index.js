@@ -2,9 +2,57 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#today-temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.city;
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity-value");
+  let windElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
 
+  cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(temperature);
+  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
+  windElement.innerHTML = response.data.wind.speed;
+  timeElement.innerHTML = formatDate(date);
+
+  console.log(response.data);
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let currentDate = date.getDate();
+
+  let nthNumber = (number) => {
+    if (number > 3 && number < 21) return "th";
+    switch (number % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${currentDate}${nthNumber(day)}, ${hours}:${minutes}`;
 }
 
 function searchCity(city) {

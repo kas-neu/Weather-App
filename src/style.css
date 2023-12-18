@@ -38,6 +38,8 @@ ul li {
 }
 main {
   padding: 30px 0;
+  text-align: center;
+  margin-left: 30px;
 }
 section {
   padding: 0 30px;
@@ -60,6 +62,7 @@ strong {
 .today-tempereature-container {
   display: flex;
   margin-top: 20px;
+  margin-left: 30px;
 }
 .today-temperature-icon {
   font-size: 38px;

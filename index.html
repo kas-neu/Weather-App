@@ -31,15 +31,17 @@
         <main>
           <div>
             <h1 class="weather-app-city" id="city"></h1>
-            <p class="city-current-date">monday 13th 13:14</p>
+            <p class="city-current-date" id="time"></p>
             <div class="today-tempereature-container">
               <div class="today-temperature-icon">☀️</div>
               <div class="today-temperature-value" id="today-temperature"></div>
               <div class="today-temperature-unit">°C</div>
             </div>
             <p class="today-weather-description">
-              clear sky, <br />
-              humidity: <strong>65%</strong>, wind: <strong>1.54km/h</strong>
+              <span id="description"></span><br />
+              humidity: <strong><span id="humidity-value"></span>%</strong>,
+              wind:
+              <strong><span id="wind-speed"></span>km/h</strong>
             </p>
           </div>
         </main>
