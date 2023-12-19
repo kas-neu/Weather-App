@@ -81,16 +81,43 @@ strong {
 .today-weather-description {
   color: rgba(39, 33, 66, 0.4);
 }
+.col-2 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
 .forecast-following-days {
-  font-size: 24px;
+  padding: 30px;
+  margin-top: 0;
 }
-.forecast-emoji {
-  font-size: 24px;
-}
-
-.forecast-info {
-  font-size: 14px;
+.forecast-day {
+  font-size: 38px;
+  text-align: left;
   color: rgba(39, 33, 66, 0.4);
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-left: 90px;
+}
+.forecast-day-icon {
+  height: 60px;
+  width: 60px;
+  text-align: right;
+
+  margin-left: auto;
+}
+.min-max-temperature-block {
+  font-size: 20px;
+  color: rgb(46, 83, 118);
+  font-weight: 450;
+}
+.forecast-temperature-max {
+  display: block;
+  text-align: right;
+}
+.forecast-temperature-min {
+  display: block;
+  text-align: right;
+  color: rgb(46, 83, 118, 0.6);
 }
 .weather-app-data {
   display: flex;
