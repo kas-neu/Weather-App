@@ -70,32 +70,42 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios(apiUrl).then(displayForecast);
 }
 
-function displayForecast() {
-  let days = ["tue", "wed", "thu", "fri"];
+function displayForecast(response) {
   forecastHtml = "";
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `   <div class="col-2">
-              <span class="forecast-day">${day}</span>
-              <span class="forecast-day-icon"
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `   <div class="col-2">
+              <span class="forecast-day">${formatDay(day.time)}</span>
+              <span 
                 ><img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                  alt=""
-                  width="60"
-                  class="forecast-emoji"
+                  src="${day.condition.icon_url}"
+                 class="forecast-day-icon"
               /></span>
               <span class="min-max-temperature-block">
-                <span class="forecast-temperature-max">20</span>
-                <span class="forecast-temperature-min">10</span>
+                <span class="forecast-temperature-max">${Math.round(
+                  day.temperature.maximum
+                )}°</span>
+                <span class="forecast-temperature-min">${Math.round(
+                  day.temperature.minimum
+                )}°</span>
               </span>
             </div>`;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
